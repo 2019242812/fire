@@ -48,15 +48,15 @@ btn.bind("click",function(){
             let textF1=$('<div class="text-f"></div>');
             let p1=$('<p></p>');
             //设置内容
-            p1.html("年代："+data.data[index].time);
+            p1.html("年代:"+data.data[index].time);
             let textF2=$('<div class="text-f"></div>');
             let p2=$('<p></p>');
             //设置内容
-            p2.html("地区："+data.data[index].addr);
+            p2.html("地区:"+data.data[index].addr);
             let textF3=$('<div class="text-f"></div>');
             let p3=$('<p></p>');
             //设置内容
-            p3.html("标签："+data.data[index].type);
+            p3.html("标签:"+data.data[index].type);
             let textRight=$('<div class="text-right"></div>');
             p1.appendTo(textF1);
             p2.appendTo(textF2);
@@ -77,31 +77,52 @@ btn.bind("click",function(){
             if(index===0){
                 results.addClass("border");
             }
-
-
-
+           let p=0;
             results.bind("click",function(){
+               if(p===0){
+                
                 let url="http://www.torchcqs.cn:5555/watch";
                 let da=results.attr("data-url");
+                
+                let norms=$('<div class="item-norms"></div>');
+                norms.html("正在加载视频，请稍等...");
+                norms.appendTo(textRight);
                 console.log(da);
+                let t={
+                    'w':da
+                }
                 $.post(
                     url,
-                    {
-                        'w':'/anime/1715.html'
-                    },
+                    t
+                    ,
                     function(data){
-                     console.log(data);
-                     console.log(da);
-                     let video=$('<video src="/i/movie.ogg" class="video" preload="metadata"  controls="controls">your browser does not support the video tag</video>');
-                     video.attr("src",""+data.data[0]);
-                     video.appendTo(textRight);
+                     console.log(data.data.length);
+                     norms.remove();
+                     console.log(t);
+                     let length=data.data.length;
+                     for(let i=0;i<length;i++){
+                         let norm=$('<div class="item-norm"></div>');
+                         let a=$('<a href="#" target="_blank"></a>');
+                         a.html(""+(i+1));
+                         a.attr("href",""+data.data[i]);
+                         a.appendTo(norm);
+                         norm.appendTo(textRight);
+                     }
+                     //let video=$('<video src="/i/movie.ogg" class="video" preload="metadata"  controls="controls">your browser does not support the video tag</video>');
+                    // video.attr("src",""+data.data[0]);
+                    // video.appendTo(textRight);
+                    //不知道怎么算播放，这是播放的标签，现在点击可以下载视频，和网站我点击一样的效果。
                     }
 
                    
                 )
-            })
+             p=1;
+             } })
+
+
             }
             }
+
 run(data);
         }
     );
