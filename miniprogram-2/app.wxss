@@ -1,0 +1,12 @@
+.container{
+  padding: 0 26rpx;
+  box-sizing: border-box;
+}
+@keyframes dh{
+  0%,50%,90%{
+    opacity:1 ;
+  }
+  25%{
+    opacity: 0;
+  }
+}/*设置动画效果 0-90透明度为一 25透明度为0*/

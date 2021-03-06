@@ -1,0 +1,31 @@
+.header{
+  width: 750rpx;
+  height: 90rpx;
+  border: 1px solid red;
+}
+.hdCon{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 26rpx;
+}
+.hdCon .logo{
+  height: 50rpx;
+}
+.hdCon .pic{
+  height: 100%;
+}
+.kefu{
+  height: 50rpx;
+  position: relative;/*相对定位*/
+}
+.kefu .btn{
+  position: absolute;/*绝对定位*/
+  width: 100%;
+  height: 100%;/*设置为父级的百分之百*/
+  opacity: 0;/*设置透明度为0，使得图片被展示*/
+}
+.kefu{
+  animation: dh/*动画效果 自定义*/ linear/*匀速播放*/ 1s/*时间*/ infinite/*重复播放*/ alternate
+}

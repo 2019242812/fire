@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "hd":"/com/hd/hd",
+    "ft":"/com/ft/ft"
+  }
+}

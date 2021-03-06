@@ -1,0 +1,121 @@
+
+
+.banner{
+  width: 100%;
+  height: 295rpx;
+  border: 1px solid green;
+}
+.banner swiper{
+  width: 100%;
+  height: 100%;
+}/*swiper自己有个自定义高度，需要覆盖*/
+.banner image{
+  width: 100%;/*宽度自适应*/
+  height: 295rpx;/*使得高度等于父级  */
+}
+.major navigator image{
+  width: 100rpx;
+  height: 100rpx;/*将图片的宽高设置为实际大小的rpx*/
+
+}
+.major .txt{
+  font-size: 26rpx;
+  margin-top: 8rpx;
+}
+.major .box{
+  text-align: center;
+  width: 170rpx;
+
+  display: inline-block;
+}
+.majorCon{
+  display: flex;
+  padding:30rpx 0;
+}
+.major{
+  white-space: nowrap;/*不换行*/
+  padding: 20rpx 0;
+}
+/*学员模块*/
+.works{
+  background-color:#f0f3f8;
+  padding:90rpx 0 70rpx;
+}
+.wkMain{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.wkMain .box{
+  width: 344rpx;
+  height: 214rpx;
+  margin-bottom: 10rpx;
+  position: relative;
+}
+.wkMain .pic{
+  width: 100%;
+  height: 100%;
+}
+.wkMain .ceng{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0,0.35);
+  position: absolute;/*绝对定位 定位到图片上*/
+  top: 0;
+  left: 0;
+  color:#fff;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}/*遮罩层*/
+.wkMain .ceng .tit{
+  font-size: 34rpx;
+}
+.wkMain .ceng .des{
+  opacity: 0.6;
+  text-transform: uppercase;
+  font-size: 26rpx;
+  letter-spacing:5rpx ;/*字符间隔*/
+}
+.wkMain .ceng .line{
+  width: 50rpx;
+  height: 2rpx;
+  background-color: #fff;
+  margin: 10rpx 0 20rpx;
+}/*用一个白色的框来表示横线*/
+.dynamic{
+ padding: 90rpx 0 70rpx; 
+}
+.dyItem{
+  display: flex;
+  padding: 15rpx 0;
+  border-bottom: 1rpx dotted #f4f4f4;
+  justify-content: space-between;
+}
+.dyItem .pic{
+ width: 230rpx;
+ height: 150rpx;
+}
+.dyItem .pic image{
+  width: 100%;
+  height: 100%;
+}
+.dyItem .txt{
+  width: 440rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.dyItem .title{
+  font-size: 34rpx;
+}
+.dyItem .info{
+  font-size: 26rpx;
+  color: #888;
+}
+.dyItem .info text{
+  font-size: 24rpx;
+}

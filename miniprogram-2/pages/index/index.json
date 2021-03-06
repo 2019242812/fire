@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "xsj":"/com/xsj/xsj",
+    "hd":"/com/hd/hd",
+    "ft":"/com/ft/ft",
+    "zj":"/com/zj/zj"
+  }
+}
